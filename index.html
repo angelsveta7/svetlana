@@ -444,10 +444,17 @@
   </footer>
 
   <script>
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-    },{threshold:.16});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    const revealEls = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+      },{threshold:0, rootMargin:'0px 0px -40px 0px'});
+      revealEls.forEach(el=>io.observe(el));
+      // safety net: reveal anything still hidden after a moment (very tall blocks on mobile)
+      setTimeout(()=>{ revealEls.forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top < window.innerHeight) el.classList.add('in'); }); }, 1200);
+    } else {
+      revealEls.forEach(el=>el.classList.add('in'));
+    }
   </script>
 
 
