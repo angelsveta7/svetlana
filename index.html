@@ -90,6 +90,7 @@
   }
   @media (min-width:1024px){
     .mb{display:inline}
+    .mission .eyebrow{font-size:clamp(1.2rem,3vw,1.9rem)}
     .mission blockquote .wide{letter-spacing:.07em}
     .mission blockquote .wide2{letter-spacing:.038em}
   }
@@ -98,13 +99,17 @@
 
   /* ---------------- CREDENTIALS ---------------- */
   .creds{padding:0 clamp(1.6rem,4vw,3.6rem) clamp(4rem,12vh,8rem)}
+  .creds__head{max-width:1100px;margin:0 auto clamp(2rem,5vh,3.2rem);text-align:center}
+  .creds__title{font-family:'Prata',serif;font-weight:400;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.12;color:var(--ivory);margin-bottom:.9rem}
+  .creds__intro{max-width:58ch;margin:0 auto;color:var(--muted);font-size:clamp(1rem,1.6vw,1.12rem);line-height:1.6}
   .creds__wrap{max-width:1100px;margin:0 auto;
-    display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
     border:1px solid var(--line);border-radius:4px;overflow:hidden}
   .cred{background:var(--night);padding:clamp(1.6rem,3vw,2.4rem);display:flex;gap:1.1rem;align-items:flex-start}
   .cred__ic{font-size:1.5rem;line-height:1;flex:0 0 auto;margin-top:.1rem}
   .cred h3{font-family:'Prata',serif;font-weight:400;font-size:1.15rem;margin-bottom:.3rem;color:var(--ivory)}
   .cred p{font-size:.95rem;color:var(--muted)}
+  .creds__note{max-width:760px;margin:clamp(1.6rem,4vh,2.4rem) auto 0;text-align:center;font-size:.8rem;line-height:1.6;color:rgba(196,167,169,.55)}
 
   /* ---------------- RITUAL / STEPS ---------------- */
   .ritual{background:var(--night-2);padding:clamp(4.5rem,13vh,9rem) clamp(1.6rem,4vw,3.6rem)}
@@ -143,7 +148,7 @@
 
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
 
-  @media (max-width:760px){
+  @media (max-width:900px){
     .creds__wrap{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){
@@ -264,26 +269,27 @@
     </div>
   </section>
 
-  <!-- CREDENTIALS -->
+  <!-- ПОДХОДЫ И ПРАКТИКИ -->
   <section class="creds">
+    <div class="creds__head reveal">
+      <h2 class="creds__title">Мои подходы и практики</h2>
+      <p class="creds__intro">Работаю с 2019 года, сочетая методы работы с сознанием, телом и энергообменом.</p>
+    </div>
     <div class="creds__wrap reveal">
       <div class="cred">
-        <div class="cred__ic">🔮</div>
-        <div><h3>Биоэнергетика и Рейки</h3><p>Мастер практики с 2019 года.</p></div>
-      </div>
-      <div class="cred">
         <div class="cred__ic">🧠</div>
-        <div><h3>Тета-хилинг</h3><p>Базовый, продвинутый уровни и <span class="quote__q">“</span>Работа с Творцом<span class="quote__q">”</span>.</p></div>
+        <div><h3>Работа с убеждениями и состояниями</h3><p>Исследование глубинных установок через визуализацию и внимание к внутренним ощущениям.</p></div>
       </div>
       <div class="cred">
         <div class="cred__ic">✨</div>
-        <div><h3>Тонкие энергии</h3><p>Взаимодействие с материальным миром на квантовом уровне.</p></div>
+        <div><h3>Энергетическое консультирование</h3><p>Практики, направленные на восстановление внутреннего баланса, снятие стресса и повышение осознанности.</p></div>
       </div>
       <div class="cred">
         <div class="cred__ic">🔥</div>
-        <div><h3>Омовение огнём</h3><p>Сеансы очищения и обновления энергетики.</p></div>
+        <div><h3>Сеансы с элементами термовоздействия (авторская методика)</h3><p>Мягкая практика с использованием тепловых инструментов для глубокого расслабления и очищения пространства внимания.</p></div>
       </div>
     </div>
+    <p class="creds__note">Все практики носят информационно-оздоровительный характер и не являются медицинскими услугами.</p>
   </section>
 
   <!-- RITUAL -->
@@ -297,28 +303,28 @@
         <div class="step__no display">01</div>
         <div class="step__body">
           <h3>Энергодыхание</h3>
-          <p>Мягкое погружение в себя. Дыхательная практика успокаивает ум, снимает напряжение и тревожность и помогает войти в ресурсное состояние — с ощущением лёгкости, ясности и прилива сил.</p>
+          <p>Мягкое погружение в себя. Дыхательная практика помогает успокоить ум, снять напряжение и войти в ресурсное состояние — с ощущением лёгкости, ясности и прилива сил.</p>
         </div>
       </div>
       <div class="step reveal">
         <div class="step__no display">02</div>
         <div class="step__body">
-          <h3>Омовение огнём</h3>
-          <p>Тёплая, обволакивающая практика очищения. Мягкое инфракрасное тепло пламени согревает тело — эффект близкий к сухой бане — помогая расслабить мышцы, отпустить всё лишнее и вернуть ощущение обновления и лёгкости.</p>
+          <h3>Тепловая практика (авторская методика)</h3>
+          <p>Тёплая, обволакивающая практика с использованием мягкого инфракрасного тепла. Согревает тело, помогает расслабить мышцы, отпустить зажимы и вернуть ощущение обновления и лёгкости.</p>
         </div>
       </div>
       <div class="step reveal">
         <div class="step__no display">03</div>
         <div class="step__body">
-          <h3>Ароматерапия ладаном</h3>
-          <p>Тёплый, глубокий аромат ладана наполняет пространство, успокаивает, очищает мысли и настраивает на внутреннюю тишину и сосредоточенность.</p>
+          <h3>Ароматерапия с натуральным ладаном</h3>
+          <p>Тёплый, глубокий аромат ладана наполняет пространство, способствует расслаблению и настраивает на внутреннюю тишину и сосредоточенность.</p>
         </div>
       </div>
       <div class="step reveal">
         <div class="step__no display">04</div>
         <div class="step__body">
-          <h3>Медитация · Тета-хилинг</h3>
-          <p>Мягкая работа с подсознанием через медитативные практики — чтобы трансформировать внутренние установки и бережно привести к гармонии разные сферы жизни.</p>
+          <h3>Медитативная практика</h3>
+          <p>Мягкая работа с вниманием и внутренними образами через медитативные техники — чтобы бережно привести к балансу разные сферы жизни.</p>
         </div>
       </div>
     </div>
