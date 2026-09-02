@@ -75,8 +75,23 @@
   .mission{padding:clamp(4.5rem,14vh,9rem) clamp(1.6rem,4vw,3.6rem);position:relative;text-align:center}
   .mission__wrap{max-width:840px;margin:0 auto}
   .mission blockquote{
-    font-family:'Prata',serif;font-size:clamp(1.6rem,4.2vw,2.9rem);
-    line-height:1.28;letter-spacing:.005em;color:var(--ivory);margin-top:1.4rem;
+    font-family:'Prata',serif;font-size:clamp(1.2rem,3vw,1.9rem);
+    line-height:1.4;letter-spacing:.005em;color:var(--ivory);margin-top:1.4rem;
+    text-align:center;text-wrap:balance;-webkit-hyphens:none;hyphens:none;
+  }
+  .mb{display:none}
+  @media (max-width:600px){
+    .mission{padding-top:2.4rem;padding-bottom:3rem;padding-left:0.6rem;padding-right:0.6rem}
+    .mission .eyebrow{font-size:clamp(.82rem,2.2vw,1rem)}
+    .mission blockquote{font-size:3.8vw}
+    .mission blockquote .wide{letter-spacing:.055em;font-size:3.9vw}
+    .mission blockquote .wide2{letter-spacing:.026em;font-size:3.9vw}
+    .mb{display:inline}
+  }
+  @media (min-width:1024px){
+    .mb{display:inline}
+    .mission blockquote .wide{letter-spacing:.07em}
+    .mission blockquote .wide2{letter-spacing:.038em}
   }
   .mission blockquote em{font-style:italic;color:var(--gold)}
   .mission__mark{font-family:'Prata',serif;color:var(--ember);font-size:2.4rem;line-height:0;opacity:.8}
@@ -245,7 +260,7 @@
     <div class="mission__wrap reveal">
       <p class="eyebrow">Моя миссия</p>
       <div class="mission__mark">“</div>
-      <blockquote>Исцеление через визуализацию, трансформация установок и <em>гармонизация всех сфер жизни</em>.</blockquote>
+      <blockquote>Помогать людям через авторскую методику, <br class="mb"><span class="wide">основанную на практике визуализации,</span> <br class="mb">развивать осознанность и личностный рост, <br class="mb"><span class="wide2">трансформировать внутренние установки,</span> <br class="mb"><span class="wide2">обретая <em>гармонию во всех сферах жизни</em>.</span></blockquote>
     </div>
   </section>
 
