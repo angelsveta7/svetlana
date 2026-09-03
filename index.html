@@ -136,6 +136,50 @@
   .contact p{color:var(--muted);max-width:44ch;margin:0 auto 2rem;font-size:1.05rem}
   .contact .handle{margin-top:1.4rem;font-size:.9rem;letter-spacing:.18em;color:var(--gold)}
 
+  /* ---------------- IMPORTANT INFO ---------------- */
+  .important-info{
+    padding:clamp(1.8rem,5vh,3rem) clamp(1.2rem,3vw,2.4rem);
+    background:var(--night);
+    border-top:1px solid rgba(230,180,102,.14);
+  }
+  .important-info__wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:clamp(1rem,2.2vw,1.35rem) clamp(1rem,2.2vw,1.4rem);
+    border:1px solid rgba(230,180,102,.14);
+    border-radius:14px;
+    background:rgba(230,180,102,.035);
+    text-align:left;
+  }
+  .important-info__title{
+    font-family:'Prata',serif;
+    font-weight:400;
+    font-size:clamp(.98rem,1.6vw,1.12rem);
+    line-height:1.35;
+    color:var(--gold);
+    margin:0 0 .55rem;
+  }
+  .important-info__text{
+    margin:0;
+    color:rgba(251,243,234,.74);
+    font-size:clamp(.84rem,1.1vw,.93rem);
+    line-height:1.58;
+    font-weight:300;
+    overflow-wrap:break-word;
+  }
+  @media (max-width:600px){
+    .important-info{
+      padding:1.5rem .85rem;
+    }
+    .important-info__wrap{
+      padding:.95rem .9rem;
+      border-radius:12px;
+    }
+    .important-info__text{
+      line-height:1.56;
+    }
+  }
+
   /* ---------------- FOOTER ---------------- */
   footer{background:#150E19;padding:clamp(2.6rem,7vh,4rem) 1.6rem;text-align:center}
   footer .fname{font-family:'Prata',serif;font-size:1.5rem;color:var(--ivory)}
@@ -454,6 +498,14 @@
         <span class="btn__glow"></span> Записаться на сеанс
       </a>
       <div class="handle">@angelsveta7</div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT INFO -->
+  <section class="important-info" aria-labelledby="important-info-title">
+    <div class="important-info__wrap">
+      <h2 class="important-info__title" id="important-info-title">🛡️ Важная информация</h2>
+      <p class="important-info__text">Деятельность носит информационно-консультационный и оздоровительный характер. Представленные практики и услуги не являются медицинскими, психологическими, психотерапевтическими или религиозными услугами, не предназначены для диагностики или лечения заболеваний и не заменяют обращение к квалифицированным специалистам. Восприятие практик и результаты индивидуальны.</p>
     </div>
   </section>
 
