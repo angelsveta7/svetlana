@@ -75,37 +75,86 @@
 
   @media (max-width:600px){
     .hero-copy--desktop{display:none}
-    .hero-copy--mobile{display:block;width:100%}
+    .hero-copy--mobile{display:block}
 
-    /* Верхняя золотая подпись: две строки одной визуальной ширины */
+    /* Верхняя золотая подпись: 2 естественные строки без растягивания пробелов */
     .hero__eyebrow-copy{
-      width:min(88vw,560px);
+      width:min(90vw,560px);
       max-width:100%;
       align-items:flex-start!important;
+      gap:.7rem!important;
+      letter-spacing:.26em;
+      line-height:1.55;
     }
     .hero__eyebrow-copy .hero-copy--mobile{
-      flex:1 1 auto;
+      flex:0 1 auto;
       min-width:0;
     }
     .hero__eyebrow-copy .hero-copy__line{
       display:block;
-      width:100%;
+      width:max-content;
+      max-width:100%;
       white-space:nowrap;
-      text-align:justify;
-      text-align-last:justify;
+      text-align:left;
+      word-spacing:normal;
+    }
+    /* Финальная микро-подгонка золотой подписи */
+    .hero__eyebrow-copy .hero-copy__line:nth-child(1){
+      font-size:1.005em;
+      letter-spacing:.27em;
+      word-spacing:.04em;
+      transform:scaleX(1.006);
+      transform-origin:left center;
+    }
+    .hero__eyebrow-copy .hero-copy__line:nth-child(2){
+      font-size:1.04em;
+      letter-spacing:.31em;
+      transform:scaleX(1.02);
+      transform-origin:left center;
     }
 
-    /* Подзаголовок: три сбалансированные строки одинаковой визуальной ширины */
+    /* Основной текст: финальная деликатная подгонка */
     .hero__lede{
-      max-width:min(88vw,560px);
+      max-width:min(91vw,560px);
+      font-size:clamp(1.02rem,4.2vw,1.17rem);
+      line-height:1.72;
     }
     .hero__lede .hero-copy__line{
       display:block;
-      width:100%;
+      width:max-content;
+      max-width:100%;
       white-space:nowrap;
-      text-align:justify;
-      text-align-last:justify;
+      text-align:left;
+      word-spacing:normal;
+      letter-spacing:0;
     }
+    .hero__lede .hero-copy__line:nth-child(1){
+      font-size:.965em;
+      letter-spacing:-.006em;
+    }
+    .hero__lede .hero-copy__line:nth-child(2){
+      font-size:1.03em;
+      letter-spacing:.006em;
+    }
+    .hero__lede .hero-copy__line:nth-child(3){
+      font-size:1.18em;
+      letter-spacing:.010em;
+      word-spacing:.055em;
+    }
+    .hero__lede .hero-copy__line:nth-child(4){
+      font-size:1.18em;
+      letter-spacing:.010em;
+      word-spacing:.055em;
+    }
+    .hero__gold-soft{
+      color:#E6B466;
+      text-shadow:0 0 8px rgba(230,180,102,.16);
+    }
+  }
+
+  .hero__gold-soft{
+    color:#E6B466;
+    text-shadow:0 0 8px rgba(230,180,102,.16);
   }
 
   /* ---------------- MISSION ---------------- */
@@ -357,11 +406,12 @@
       </p>
       <h1 class="display hero__name">Светлана</h1>
       <p class="hero__lede">
-        <span class="hero-copy--desktop">Путь к внутреннему балансу через визуализацию, трансформацию установок и гармонизацию всех сфер жизни.</span>
+        <span class="hero-copy--desktop">Путь к внутреннему балансу через визуализацию, трансформацию установок и <span class="hero__gold-soft">гармонизацию всех сфер жизни.</span></span>
         <span class="hero-copy--mobile" aria-hidden="true">
           <span class="hero-copy__line">Путь к внутреннему балансу через</span>
-          <span class="hero-copy__line">визуализацию, трансформацию установок</span>
-          <span class="hero-copy__line">и гармонизацию всех сфер жизни.</span>
+          <span class="hero-copy__line">визуализацию, трансформацию</span>
+          <span class="hero-copy__line">установок и <span class="hero__gold-soft">гармонизацию</span></span>
+          <span class="hero-copy__line"><span class="hero__gold-soft">всех сфер жизни.</span></span>
         </span>
       </p>
       <a class="btn" href="https://t.me/angelsveta7" target="_blank" rel="noopener">
